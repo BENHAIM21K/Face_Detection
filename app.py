@@ -11,11 +11,11 @@ from botocore.exceptions import NoCredentialsError
 import keyboard
 import traceback
 
-# AWS S3 Configuration
+# AWS S3 Configuration 
 bucket_name = 'null'  
 folder_path = 'null'  
 
-# AWS credentials (Insert your credentials here)
+# AWS credentials 
 aws_access_key_id='null'
 aws_secret_access_key='null'
 
