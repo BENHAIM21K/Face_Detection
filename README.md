@@ -18,7 +18,7 @@ This project captures frames containing movement and human heads from an RTSP ca
 
 The architecture of the project is as follows:
 
-![Project Architecture](assets/MovementDetectionArchitechture.png.png)
+![Project Architecture](assests/MovementDetectionArchitechture.png.png)
 
 1. **RTSP Camera**:
    - Streams video over RTSP.
