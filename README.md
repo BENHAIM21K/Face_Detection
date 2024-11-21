@@ -13,12 +13,36 @@ This project captures frames containing movement and human heads from an RTSP ca
 
 ---
 
+
+## Architecture
+
+The architecture of the project is as follows:
+
+![Project Architecture](MovementDetectionArchitechture.png.png)
+
+1. **RTSP Camera**:
+   - Streams video over RTSP.
+   - Frames with detected motion are captured locally.
+
+2. **Python Script**:
+   - Processes video frames to detect motion and faces.
+   - Recognizes known faces and labels unknown faces.
+   - Saves the captured frames locally and uploads them to an AWS S3 bucket.
+
+3. **AWS S3 Bucket**:
+   - Stores the uploaded images in a specific folder (`uploads/`).
+   - Triggers an AWS Lambda function upon new uploads.
+
+4. **AWS Lambda**:
+   - Analyzes the images using AWS Rekognition for additional insights.
+   - Sends the analysis results and a pre-signed URL via AWS SNS to an email address.
+
 ## Prerequisites
 1. **Python Libraries**:
    - `opencv-python`, `dlib`, `numpy`, `face_recognition`, `boto3`, `keyboard`, `getpass`
    - Install dependencies using pip:
      ```bash
-     pip install opencv-python dlib face_recognition boto3 keyboard
+     pip install -r requirements.txt
      ```
 
 2. **Camera**:
