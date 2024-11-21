@@ -18,7 +18,7 @@ This project captures frames containing movement and human heads from an RTSP ca
    - `opencv-python`, `dlib`, `numpy`, `face_recognition`, `boto3`, `keyboard`, `getpass`
    - Install dependencies using pip:
      ```bash
-     pip install opencv-python dlib face_recognition boto3 keyboard
+     pip install -r requirements.txt
      ```
 
 2. **Camera**:
